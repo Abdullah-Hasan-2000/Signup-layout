@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Color on Input Focus</title>
+  <style>
+    .container {
+      padding: 20px;
+      border: 1px solid #ccc;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .container p,
+    .container img {
+      transition: color 0.3s ease, filter 0.3s ease;
+    }
+
+    .container:focus-within {
+      background-color: #f0f0f0;
+    }
+
+    .container:focus-within p {
+      color: #007BFF;
+    }
+
+    .container:focus-within img {
+      filter: brightness(0.5);
+    }
+
+    input {
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <p>This is a paragraph.</p>
+    <input type="text" placeholder="Focus me">
+    <img src="https://via.placeholder.com/100" alt="Placeholder image">
+  </div>
+
+</body>
+</html>
